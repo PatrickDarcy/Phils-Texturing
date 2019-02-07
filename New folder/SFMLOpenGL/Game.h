@@ -4,12 +4,11 @@
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 
-#include <Vector3.h>
-#include <Matrix3.h>
+#include <MyVector3.h>
+#include <MyMatrix3.h>
 
 using namespace std;
 using namespace sf;
-using namespace gpp;
 
 class Game
 {
@@ -28,5 +27,10 @@ private:
 	Clock clock;
 	Time elapsed;
 
-	float rotationAngle = 0.0f;
+	float rotationAngleX = 0.0f;
+	float rotationAngleY = 0.0f;
+	float rotationAngleZ = 0.0f;
+	float m_scale = 1.0f;
+
+	MyVector3 displacementVec = { 0.0, 0.0, 0.0 };
 };
